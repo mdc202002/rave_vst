@@ -200,18 +200,6 @@ public:
   }
 
   void selectedRowsChanged(int /*lastRowselected*/) override {
-    _modelName.setText(_ApiModelsNames[_modelsList.getSelectedRow()] +
-                       " Model");
-    _info.setText(
-        "Version " +
-        const var(_ApiModelsData[_modelsList.getSelectedRow()]["Version"]) +
-        " - " + const var(_ApiModelsData[_modelsList.getSelectedRow()]["Date"]) +
-        "\nAuthor: " +
-        const var(_ApiModelsData[_modelsList.getSelectedRow()]["Author"]));
-    _descriptionLabel.setText("Model Description:",
-                              NotificationType::dontSendNotification);
-    _description.setText(
-        _ApiModelsData[_modelsList.getSelectedRow()]["Description"]);
     _aModelIsSelected = true;
   }
 

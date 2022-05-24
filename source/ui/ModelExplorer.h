@@ -204,10 +204,10 @@ public:
                        " Model");
     _info.setText(
         "Version " +
-        String(_ApiModelsData[_modelsList.getSelectedRow()]["Version"]) +
-        " - " + String(_ApiModelsData[_modelsList.getSelectedRow()]["Date"]) +
+        const var(_ApiModelsData[_modelsList.getSelectedRow()]["Version"]) +
+        " - " + const var(_ApiModelsData[_modelsList.getSelectedRow()]["Date"]) +
         "\nAuthor: " +
-        String(_ApiModelsData[_modelsList.getSelectedRow()]["Author"]));
+        const var(_ApiModelsData[_modelsList.getSelectedRow()]["Author"]));
     _descriptionLabel.setText("Model Description:",
                               NotificationType::dontSendNotification);
     _description.setText(
